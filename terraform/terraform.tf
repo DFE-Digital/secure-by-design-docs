@@ -9,8 +9,8 @@ terraform {
   required_version = "~> 1.9.5"
 
   backend "azurerm" {
-    resource_group_name  = "s194d00-dfe-secure-by-design-docs"
-    storage_account_name = "tfstateptj0wi"
+    resource_group_name  = "s194d00-dfe-secure-by-design-docs_rg"
+    storage_account_name = "tfstatepfqk89"
     container_name       = "tfstate"
     key                  = "sbd.tfstate"
   }
@@ -22,7 +22,7 @@ provider "azurerm" {
 }
 
 locals {
-  resource_group = "s194d00-dfe-secure-by-design-docs"
+  resource_group = "s194d00-dfe-secure-by-design-docs_rg"
   tags = {
     "Product"          = "Protective Monitoring - Splunk SaaS"
     "Environment"      = "Dev"
@@ -31,7 +31,7 @@ locals {
 
 }
 
-resource "azurerm_resource_group" "dfe_secure_by_design_docs" {
+resource "azurerm_resource_group" "dfe_secure_by_design_docs_rg" {
   name     = local.resource_group
   location = "West Europe"
   tags     = local.tags
@@ -45,8 +45,8 @@ resource "random_string" "sbd_resource_code_sg" {
 
 resource "azurerm_storage_account" "tfstate" {
   name                            = "tfstate${random_string.sbd_resource_code_sg.result}"
-  resource_group_name             = azurerm_resource_group.dfe_secure_by_design_docs.name
-  location                        = azurerm_resource_group.dfe_secure_by_design_docs.location
+  resource_group_name             = azurerm_resource_group.dfe_secure_by_design_docs_rg.name
+  location                        = azurerm_resource_group.dfe_secure_by_design_docs_rg.location
   account_tier                    = "Standard"
   account_replication_type        = "LRS"
   allow_nested_items_to_be_public = false
@@ -63,8 +63,8 @@ resource "azurerm_storage_container" "tfstate" {
 
 resource "azurerm_storage_account" "dfe-secure-by-design-docs-storage" {
   name                       = "dfesbddocs${random_string.sbd_resource_code_sg.result}"
-  resource_group_name        = azurerm_resource_group.dfe_secure_by_design_docs.name
-  location                   = azurerm_resource_group.dfe_secure_by_design_docs.location
+  resource_group_name        = azurerm_resource_group.dfe_secure_by_design_docs_rg.name
+  location                   = azurerm_resource_group.dfe_secure_by_design_docs_rg.location
   account_kind               = "StorageV2"
   account_tier               = "Standard"
   account_replication_type   = "LRS"
@@ -108,11 +108,11 @@ output "storage_account_name" {
 
 
 resource "azurerm_dns_cname_record" "dfe-secure-by-design-docs-cname" {
-  name                = "sbd"
+  name                = "secure-by-design"
   zone_name           = "security.education.gov.uk"
   resource_group_name = "s194d00-security-dns"
   ttl                 = 60 # 3600 (raise once working)
-  target_resource_id = azurerm_cdn_endpoint.sbd-cdn-endpoint.id
+  target_resource_id = azurerm_cdn_endpoint.secure-by-design-cdn-endpoint.id
 
   # Spaces in tags not allowed for cname records
   tags = {
@@ -122,19 +122,19 @@ resource "azurerm_dns_cname_record" "dfe-secure-by-design-docs-cname" {
   }
 }
 
-resource "azurerm_cdn_profile" "sbd-cdn-profile" {
+resource "azurerm_cdn_profile" "secure-by-design-cdn-profile" {
   name                = "sbd-security-education-gov-uk-cdnprofile"
-  resource_group_name = azurerm_resource_group.dfe_secure_by_design_docs.name
-  location            = azurerm_resource_group.dfe_secure_by_design_docs.location
+  resource_group_name = azurerm_resource_group.dfe_secure_by_design_docs_rg.name
+  location            = azurerm_resource_group.dfe_secure_by_design_docs_rg.location
   sku                 = "Standard_Microsoft"
   tags                = local.tags
 }
 
-resource "azurerm_cdn_endpoint" "sbd-cdn-endpoint" {
+resource "azurerm_cdn_endpoint" "secure-by-design-cdn-endpoint" {
   name                = "sbd-security-education-gov-uk-cdnendpoint"
-  profile_name        = azurerm_cdn_profile.sbd-cdn-profile.name
-  resource_group_name = azurerm_resource_group.dfe_secure_by_design_docs.name
-  location            = azurerm_resource_group.dfe_secure_by_design_docs.location
+  profile_name        = azurerm_cdn_profile.secure-by-design-cdn-profile.name
+  resource_group_name = azurerm_resource_group.dfe_secure_by_design_docs_rg.name
+  location            = azurerm_resource_group.dfe_secure_by_design_docs_rg.location
   is_http_allowed     = false
   is_https_allowed    = true
   tags                = local.tags
