@@ -1,0 +1,6 @@
+**tfstate*
+**lock.hcl
+**.terraform
+site/
+.DS_Store
+venv/
