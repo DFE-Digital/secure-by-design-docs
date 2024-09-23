@@ -35,14 +35,14 @@ jobs:
       - name: build docs
         run: mkdocs build -d site/
     
-      - name: Upload directory
+      - name: Upload site directory
         uses: actions/upload-artifact@v4
         with:
           name: site
           path: site/
           retention-days: 1
         
-      - name: Upload directory
+      - name: Upload useful_docs directory
         uses: actions/upload-artifact@v4
         with:
           name: useful_docs
@@ -132,5 +132,5 @@ jobs:
         uses: azure/CLI@v2
         with:
           inlineScript: |
-            az cdn endpoint purge --content-paths  "/**" --profile-name ${{ needs.build-infra.outputs.cdn_profile }} --name ${{ needs.build-infra.outputs.cdn_profile }} --resource-group ${{ needs.build-infra.outputs.resource_group }}
+            az cdn endpoint purge --content-paths  "/*" --profile-name ${{ needs.build-infra.outputs.cdn_profile }} --endpoint-name ${{ needs.build-infra.outputs.cdn_endpoint }} --resource-group ${{ needs.build-infra.outputs.resource_group }}
             
