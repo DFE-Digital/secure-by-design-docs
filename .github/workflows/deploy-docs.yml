@@ -34,6 +34,20 @@ jobs:
 
       - name: build docs
         run: mkdocs build -d site/
+    
+      - name: Upload directory
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: site/
+          retention-days: 1
+        
+      - name: Upload directory
+        uses: actions/upload-artifact@v4
+        with:
+          name: useful_docs
+          path: useful_docs/
+          retention-days: 1
 
   build-infra:
 
@@ -89,8 +103,17 @@ jobs:
       contents: read
 
     steps:
-      - name: checkout
-        uses: actions/checkout@v4
+      - name: Download site directory
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: site/
+
+      - name: Download useful_docs directory
+        uses: actions/download-artifact@v4
+        with:
+          name: useful_docs
+          path: useful_docs/
   
       - name: Azure Login
         uses: azure/login@v2
