@@ -21,8 +21,3 @@ output "cdn_endpoint_name" {
   description = "cdn endpoint name"
   value       = azurerm_cdn_endpoint.secure-by-design-cdn-endpoint.name
 }
-
-output "storage_account_primary_web_host" {
-  description = "primary web host"
-  value       = azurerm_storage_account.dfe-secure-by-design-docs-storage.primary_web_host
-}
