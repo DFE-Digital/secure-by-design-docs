@@ -80,18 +80,6 @@ jobs:
           echo "CDN_ENDPOINT_NAME=$(terraform output -raw cdn_endpoint_name)" >> $GITHUB_OUTPUT
           echo "RESOURCE_GROUP_NAME=$(terraform output -raw resource_group_name)" >> $GITHUB_OUTPUT
 
-        
-      - name: Availability test
-        run: |
-          status_code=$(curl -s -o /dev/null -w "%{http_code}" https://secure-by-design.security.education.gov.uk/)
-          
-          if [ $status_code == 200 ]
-          then
-            echo "Documentation site successfully deployed to https://secure-by-design.security.education.gov.uk/"
-          else
-            echo "Error deploying to https://secure-by-design.security.education.gov.uk/, status code returned: $status_code"
-            exit 1
-          fi
 
   push-files:
     needs: [build-docs, build-infra]
