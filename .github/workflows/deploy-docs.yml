@@ -1,0 +1,125 @@
+---
+name: Deploy docs to Azure Storage static site
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'terraform/**'
+      - '.github/workflows/deploy-docs.yml'
+      - 'docs/**'
+      - 'includes/**'
+      - 'useful_docs/**'
+      - 'mkdocs.yml'
+  workflow_dispatch:
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    permissions: 
+      contents: read
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.3'
+    
+      - name: install mkdocs
+        run: python3 -m pip install mkdocs mkdocs-material pymdown-extensions
+
+      - name: build docs
+        run: mkdocs build -d site/
+
+  build-infra:
+
+    runs-on: ubuntu-latest
+    needs: build-docs
+
+    permissions: 
+      contents: read
+
+    outputs:
+      storage_account: ${{ steps.run-tf.outputs.STORAGE_ACCOUNT_NAME }}
+      cdn_profile: ${{ steps.run-tf.outputs.CDN_PROFILE_NAME }}
+      cdn_endpoint: ${{ steps.run-tf.outputs.CDN_ENDPOINT_NAME }}
+      resource_group: ${{ steps.run-tf.outputs.RESOURCE_GROUP_NAME }}
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+            terraform_version: 1.9.5
+            terraform_wrapper: false
+
+      - name: Terraform version
+        run: terraform -version
+
+      - name: Run terraform
+        id: run-tf
+        env:
+            ARM_ACCESS_KEY: ${{ secrets.ARM_ACCESS_KEY }}
+            ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+            ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+            ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+            ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+        run: |
+          cd terraform/
+          terraform init
+          terraform apply -auto-approve
+
+          echo "STORAGE_ACCOUNT_NAME=$(terraform output -raw storage_account_name)" >> $GITHUB_OUTPUT
+          echo "CDN_PROFILE_NAME=$(terraform output -raw cdn_profile_name)" >> $GITHUB_OUTPUT
+          echo "CDN_ENDPOINT_NAME=$(terraform output -raw cdn_endpoint_name)" >> $GITHUB_OUTPUT
+          echo "RESOURCE_GROUP_NAME=$(terraform output -raw resource_group_name)" >> $GITHUB_OUTPUT
+
+        
+      - name: Availability test
+        run: |
+          status_code=$(curl -s -o /dev/null -w "%{http_code}" https://secure-by-design.security.education.gov.uk/)
+          
+          if [ $status_code == 200 ]
+          then
+            echo "Documentation site successfully deployed to https://secure-by-design.security.education.gov.uk/"
+          else
+            echo "Error deploying to https://secure-by-design.security.education.gov.uk/, status code returned: $status_code"
+            exit 1
+          fi
+
+  push-files:
+    needs: [build-docs, build-infra]
+    runs-on: ubuntu-latest
+
+    permissions: 
+      contents: read
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+  
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: '{"clientId":"${{ secrets.ARM_CLIENT_ID }}","clientSecret":"${{ secrets.ARM_CLIENT_SECRET }}","subscriptionId":"${{ secrets.ARM_SUBSCRIPTION_ID }}","tenantId":"${{ secrets.ARM_TENANT_ID }}"}'
+
+      - name: Upload to blob storage
+        uses: azure/CLI@v2
+        with:
+          inlineScript: |
+            az storage blob upload-batch --account-name ${{ needs.build-infra.outputs.storage_account }} -d '$web' --overwrite --source ./site
+            az storage blob upload-batch --account-name ${{ needs.build-infra.outputs.storage_account }} -d '$web' --overwrite --source ./useful_docs
+            
+
+      - name: Purge CDN endpoint
+        uses: azure/CLI@v2
+        with:
+          inlineScript: |
+            az cdn endpoint purge --content-paths  "/**" --profile-name ${{ needs.build-infra.outputs.cdn_profile }} --name ${{ needs.build-infra.outputs.cdn_profile }} --resource-group ${{ needs.build-infra.outputs.resource_group }}
+            

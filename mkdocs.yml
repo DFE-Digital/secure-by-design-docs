@@ -6,6 +6,7 @@ extra:
 theme:
   name: material
   logo: assets/coat-of-arms.svg
+  favicon: assets/favicon.svg
   font:
     text: Inter
   features:

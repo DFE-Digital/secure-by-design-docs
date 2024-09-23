@@ -135,7 +135,7 @@ resource "azurerm_cdn_endpoint" "secure-by-design-cdn-endpoint" {
   profile_name        = azurerm_cdn_profile.secure-by-design-cdn-profile.name
   resource_group_name = azurerm_resource_group.dfe_secure_by_design_docs_rg.name
   location            = azurerm_resource_group.dfe_secure_by_design_docs_rg.location
-  is_http_allowed     = false
+  is_http_allowed     = true
   is_https_allowed    = true
   tags                = local.tags
 
@@ -148,7 +148,7 @@ resource "azurerm_cdn_endpoint" "secure-by-design-cdn-endpoint" {
 
   delivery_rule {
     name  = "EnforceHTTPS"
-    order = "1"
+    order = "2"
 
     request_scheme_condition {
       operator     = "Equal"
@@ -160,4 +160,34 @@ resource "azurerm_cdn_endpoint" "secure-by-design-cdn-endpoint" {
       protocol      = "Https"
     }
   }
+
+  delivery_rule {
+    name  = "TempRedirect"
+    order = "1"
+
+    remote_address_condition {
+      operator = "IPMatch"
+      negate_condition = true
+      # Temporarily redirect users not on the dfe vpn while under construction
+      match_values = ["208.127.46.232/29", "208.127.46.240/28"]
+    }
+
+    url_redirect_action {
+      redirect_type = "TemporaryRedirect"
+      protocol      = "Https"
+      hostname      = "education.gov.uk"
+    }
+  }
 }
+
+# Was done manually, but this code will implement it in tf if we were to ever destroy (currently clashes with state)
+# resource "azurerm_cdn_endpoint_custom_domain" "sbd-cdn-custom-domain" {
+#   name = "sbd-cdn-custom-domain"
+#   cdn_endpoint_id = azurerm_cdn_endpoint.secure-by-design-cdn-endpoint.id
+#   host_name = "secure-by-design.security.education.gov.uk"
+#   cdn_managed_https {
+#     certificate_type = "Dedicated"
+#     protocol_type    = "ServerNameIndication"
+#     tls_version      = "TLS12"
+#   }
+# }
