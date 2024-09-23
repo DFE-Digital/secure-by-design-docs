@@ -67,6 +67,12 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
+      - name: Download site directory
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: site/
+
       - name: Deploy terraform
         uses: hashicorp/setup-terraform@v3
         with:
