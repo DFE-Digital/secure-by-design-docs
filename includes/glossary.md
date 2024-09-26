@@ -9,3 +9,11 @@
 *[DfE-SignIn]: Department for Education Identity Provider
 *[OWASP]: Open Worldwide Application Security Project 
 *[ASVS]: Application Security Verification Standards 
+*[VM]: Vulnerability Management
+*[SMT]: Senior Management Team
+*[G6]: DfE Grade 6 band
+*[DD]: Deputy Director
+*[SAST]: Static Application Security Testing
+*[DAST]: Dynamic Application Security Testing
+*[SCA]: Software Composition Analysis
+*[VDP]: Vulnerability Disclosure Programme
