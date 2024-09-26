@@ -1,6 +1,6 @@
-site_name: DfE Tech Docs Template
+site_name: DfE Secure by Design Documentation
 copyright: <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
-repo_url: https://github.com/DFE-Digital/tech-docs-template
+repo_url: https://github.com/DFE-Digital/secure-by-design-docs
 extra:
   generator: false
 theme:
