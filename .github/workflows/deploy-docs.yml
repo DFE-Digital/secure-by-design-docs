@@ -131,7 +131,7 @@ jobs:
         with:
           inlineScript: |
             az storage blob upload-batch --account-name ${{ needs.build-infra.outputs.storage_account }} -d '$web' --overwrite --source ./site
-            az storage blob upload-batch --account-name ${{ needs.build-infra.outputs.storage_account }} -d '$web' --overwrite --source ./useful_docs
+            az storage blob upload-batch --account-name ${{ needs.build-infra.outputs.storage_account }} -d '$web/useful_docs' --overwrite --source ./useful_docs
             
 
       - name: Purge CDN endpoint
