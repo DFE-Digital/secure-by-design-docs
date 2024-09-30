@@ -6,6 +6,8 @@ DfE CISD has provided a number of tools, templates and guides to help portfolios
 
 ## SAST (Static Analysis Software Testing)
 
+SAST scans are an important component that should be introduced during the development and deployment of your application. SAST scans can be run locally with a CLI or IDE tool, but is more likely.
+
 
 ## Threat modelling
 
