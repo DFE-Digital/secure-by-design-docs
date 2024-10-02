@@ -6,6 +6,27 @@ DfE CISD has provided a number of tools, templates and guides to help portfolios
 
 ## Roles and responsibilities
 
+### Service teams and portfolios
+
+It is the service teams and portfolios responsibility to produce secure digital services and to follow good practices when building their services.
+
+Part of building digital services is to ensure that potential vulnerabilities are found and fixed within reasonable timeframes to reduce the risk to the service and data. This should include steps that should be taken in multiple steps within the software development lifecycle to try and discover vulnerabilities and mitigate them.
+
+### CISD
+
+It is CISDs responsibility to provide support, guidance and tooling to digital service teams and portfolios in vulnerability discovery, mitigation planning, vulnerability tracking and risk management. 
+
+CISD will:
+
+* provide SAST tooling, templates and guidance
+* provide SCA tooling, templates and guidance
+* provide threat modelling tooling, guidance and resource
+* provide mitigation plan assistance 
+* provide vulnerability management for critical issues
+* run a Vulnerability Disclosure Programme
+* run vulnerability scans for virtual machines in Azure
+* provide assistance and guidance on building DAST scans into CI/CD
+* provide guidance and assistance on running penetration tests and producing mitigations for vulnerabilities
 
 
 ## SAST (Static Analysis Software Testing)
@@ -105,3 +126,39 @@ Outputs include:
     Central location TBC. We will ingest your JSON output into [the continuous assurance platform](../Continuous%20Assurance/continuous_assurance.md) so you can easily track threats and vulnerabilities in one place.
 
 
+## Vulnerability scanning
+
+The Vulnerability Management team currently run Qualys vulnerability scans across all Azure Virtual Machines in DfE. The scans are agent based, with the agents automatically being deployed to any VM that is created in our tenancies. 
+
+The VM team will manage the vulnerabilities with teams, and notify teams of critical risk issues over SLA. They will also provide dashboards in the Continuous Assurance platform for teams to view vulnerabilities themselves.
+
+
+## Penetration testing
+
+Digital services should run regular pen testing to provide assurance that the service is secure, and teams should keep money in their budget for tests every year.
+
+Common testing schedules include:
+
+* before a new service goes live
+* when significant changes are made to the codebase or infrastructure
+* quarterly
+* yearly
+
+CISD are here to advise teams on expected schedules, to risk assess the output from pen tests, and to provide guidance on mitigation plans.
+
+
+## Peer review (Pull Requests)
+
+Before merging code to production, teams should follow a pull request process managed by strong branch protection rules.
+
+Branch protection rules should include (for example):
+
+* at least one approval before merging
+* dismissal of stale approvals when new commits are pushed
+* codeowners review requirement
+* approval of most recent push
+* conversation resolution before merging
+* status checks to have passed
+* signed commits 
+
+More guidance can be found on the [DfE technical guidance standards](https://technical-guidance.education.gov.uk/standards/storing-source-code/#repository-requirements).
