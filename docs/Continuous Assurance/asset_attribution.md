@@ -10,14 +10,20 @@ Each service will be expected to add three custom properties to each of their re
 
 You can add custom properties and set values for those properties for repositories by following the steps below.
 
-1. Under the repository settings page, select custom properties listed under the "Code and automation" section.
+1. Under the repository settings page, select custom properties listed under the "Code and automation" section. 
     
-2. Filter for the custom property you are going to set using the search bar.
-    
-	1. For the `portfolio` and `service_line` custom properties there will be a drop down menus available to choose your custom properties, which will correspond to [the custom properties table](#table-of-properties).
-	2. For the `product` custom property, please copy and paste the value in the table below and paste it into the text field.
+2. Filter for the custom property you are going to set using the search bar and choose your tags from [the custom properties table](#table-of-properties) below.
+
+![screenshot of settings page](../../assets/settings.png){: style="height:400px;width:350px"}
+
+!!! info "Adding portfolio and service line custom properties"
+    For the `portfolio` and `service_line` custom properties there will be drop down menus available to choose your custom properties, which will correspond to [the custom properties table](#table-of-properties).
+
+
+!!! info "Adding the product customer property"
+	For the `product` custom property, please copy and paste the value in the [the custom properties table](#table-of-properties) below and paste it into the text field.
    
-??? warning "Please that the canonical integrity of the each of the fields and the combination of the fields is hugely important."
+??? warning "Please note that the canonical integrity of the each of the fields and the combination of the fields is hugely important."
     Please take great care to select options from the drop downs and text for the product that exist together on a single row in the below table.
 
 ## Table of properties
