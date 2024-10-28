@@ -1,3 +1,10 @@
+---
+title: Incident management
+summary: An overview of how incident management works in DfE
+authors:
+    - Ian Pearl
+date: 2024-10-22
+---
 # Incident Management
 
 ## Overview

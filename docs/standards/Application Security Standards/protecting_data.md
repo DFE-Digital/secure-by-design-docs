@@ -1,3 +1,10 @@
+---
+title: "Application Security Standards: Protecting Data (Encryption and Cryptography)"
+summary: Applicaion security standards for protecting data (Encryption and Cryptography) in DfE based on ASVS 
+authors:
+    - Sam Pritchard
+date: 2024-10-22
+---
 # Protecting data (Encryption and Cryptography)
 
 When processing, receiving, sending and storing data, applications must protect the data from unauthorised access and snooping. We must comply with all relevant laws and regulations including (but not limited to) the [Data Protection Act](https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted), [GDPR](https://gdpr-info.eu/) and [PCI DSS](https://www.pcisecuritystandards.org/) (where credit cards are processed).

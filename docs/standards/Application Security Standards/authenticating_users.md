@@ -1,3 +1,10 @@
+---
+title: "Application Security Standards: Authenticating users"
+summary: Applicaion security standards for authenticating users in DfE based on ASVS 
+authors:
+    - Sam Pritchard
+date: 2024-10-22
+---
 # Authenticating users
 
 When authenticating users to your application, you should always use tried and tested systems, frameworks, standards and libraries. Authentication is a complex problem with domain experts who solve those problems so you don't have to. 

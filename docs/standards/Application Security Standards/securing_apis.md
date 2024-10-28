@@ -1,3 +1,10 @@
+---
+title: "Application Security Standards: Securing APIs"
+summary: Application security standards for Securing APIs in DfE based on ASVS 
+authors:
+    - Sam Pritchard
+date: 2024-10-22
+---
 # Securing APIs (WIP)
 
 | #       | Description                                                                                  | ASVS |

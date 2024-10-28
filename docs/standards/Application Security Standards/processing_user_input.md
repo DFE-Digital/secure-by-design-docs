@@ -1,3 +1,10 @@
+---
+title: "Application Security Standards: Processing User Input (input validation and sanitisation)"
+summary: Applicaion security standards for processing user input (input validation and sanitisation) in DfE based on ASVS 
+authors:
+    - Sam Pritchard
+date: 2024-10-22
+---
 # Processing User Input (input validation and sanitisation)
 
 Processing user input should always be done with care and thought behind what the application is expecting to receive from a user request, and what the application actually receives. Validation should always attempt to only accept parameters and values that look exactly as expected and reject or drop anything else.
