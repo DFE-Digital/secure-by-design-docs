@@ -1,3 +1,10 @@
+---
+title: "Secure by Design - Digital Service Standards"
+summary: A list of standards to accompany the Secure by Design process
+authors:
+    - Sam Pritchard
+date: 2024-10-22
+---
 # Secure by Design - Digital Service Standards 
 
 ## Application Security Standards

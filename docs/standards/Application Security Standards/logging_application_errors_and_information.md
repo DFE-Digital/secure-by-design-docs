@@ -1,3 +1,10 @@
+---
+title: "Application Security Standards: Logging application errors and information"
+summary: Applicaion security standards for logging application errors and information in DfE based on ASVS 
+authors:
+    - Sam Pritchard
+date: 2024-10-22
+---
 # Logging application errors and information
 
 A common logging format must be followed throughout an application, and should ideally follow a DfE standardised logging format.

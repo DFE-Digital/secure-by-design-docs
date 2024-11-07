@@ -1,3 +1,11 @@
+---
+title: Home
+summary: Welcome page to CISD SBD documentation
+authors:
+    - Sam Pritchard
+    - Ian Pearl
+date: 2024-10-22
+---
 # Welcome
 
 Welcome to the Department for Education Secure-by-Design development documentation.

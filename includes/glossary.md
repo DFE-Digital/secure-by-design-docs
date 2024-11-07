@@ -18,3 +18,6 @@
 *[SCA]: Software Composition Analysis
 *[VDP]: Vulnerability Disclosure Programme
 *[DfE-Digital]: DfE's main GitHub organisation https://github.com/dfe-digital
+*[GHAST]: GitHub Advanced Security Tab
+*[CAP]: Continuous Assurance Platform
+*[SLA]: Service Level Agreement
