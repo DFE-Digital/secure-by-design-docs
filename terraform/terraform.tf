@@ -151,23 +151,6 @@ resource "azurerm_cdn_endpoint" "secure-by-design-cdn-endpoint" {
     }
   }
 
-  delivery_rule {
-    name  = "TempRedirect"
-    order = "1"
-
-    remote_address_condition {
-      operator = "IPMatch"
-      negate_condition = true
-      # Temporarily redirect users not on the dfe vpn while under construction
-      match_values = ["208.127.46.232/29", "208.127.46.240/28"]
-    }
-
-    url_redirect_action {
-      redirect_type = "TemporaryRedirect"
-      protocol      = "Https"
-      hostname      = "education.gov.uk"
-    }
-  }
 }
 
 # Was done manually, but this code will implement it in tf if we were to ever destroy (currently clashes with state)
