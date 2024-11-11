@@ -56,9 +56,9 @@ resource "azurerm_storage_account" "tfstate" {
 }
 
 resource "azurerm_storage_container" "tfstate" {
-  name                   = "tfstate"
-  storage_account_id     =  azurerm_storage_account.tfstate.id
-  container_access_type  = "private"
+  name                  = "tfstate"
+  storage_account_name  = azurerm_storage_account.tfstate.name
+  container_access_type = "private"
 }
 
 resource "azurerm_storage_account" "dfe-secure-by-design-docs-storage" {
@@ -81,7 +81,7 @@ resource "azurerm_storage_account" "dfe-secure-by-design-docs-storage" {
 
 resource "azurerm_storage_blob" "dfe-secure-by-design-docs-blob-index" {
   name                   = "index.html"
-  storage_account_id     = azurerm_storage_account.dfe-secure-by-design-docs-storage.id
+  storage_account_name   = azurerm_storage_account.dfe-secure-by-design-docs-storage.name
   storage_container_name = "$web"
   type                   = "Block"
   content_type           = "text/html"
@@ -90,7 +90,7 @@ resource "azurerm_storage_blob" "dfe-secure-by-design-docs-blob-index" {
 
 resource "azurerm_storage_blob" "dfe-secure-by-design-docs-blob-404" {
   name                   = "404.html"
-  storage_account_id     = azurerm_storage_account.dfe-secure-by-design-docs-storage.id
+  storage_account_name   = azurerm_storage_account.dfe-secure-by-design-docs-storage.name
   storage_container_name = "$web"
   type                   = "Block"
   content_type           = "text/html"
