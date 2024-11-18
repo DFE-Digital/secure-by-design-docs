@@ -21,3 +21,4 @@
 *[GHAST]: GitHub Advanced Security Tab
 *[CAP]: Continuous Assurance Platform
 *[SLA]: Service Level Agreement
+*[ISO]: Information Security Officer
