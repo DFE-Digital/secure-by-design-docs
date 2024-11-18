@@ -17,3 +17,11 @@ This is where the SBD team in CISD are going to build out the plans for how CISD
 The Portfolios are responsible for achieving and proving SBD compliance in order to get approval for project funding from CDDO. 
 
 This site describes how CISD will support the Portfolios through that process.
+
+
+## Contact
+
+If you have any questions regarding SBD or would like to enquire about taking advantage of CISD services to meet your SBD requirements, then please contact us on:
+
+* slack
+* email
