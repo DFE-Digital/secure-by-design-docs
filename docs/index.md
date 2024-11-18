@@ -23,5 +23,6 @@ This site describes how CISD will support the Portfolios through that process.
 
 If you have any questions regarding SBD or would like to enquire about taking advantage of CISD services to meet your SBD requirements, then please contact us on:
 
-* slack
-* email
+* [the slack working group](https://ukgovernmentdfe.slack.com/archives/C07N27D5SG5)
+* [the open slack channel](https://ukgovernmentdfe.slack.com/archives/C081Q6S91FB)
+* [email](TBC)
