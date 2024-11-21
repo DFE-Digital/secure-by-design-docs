@@ -78,5 +78,4 @@ The <TEAM> team should also try and obtain confirmation from the Senior Responsi
 | -------- | ------------------- | ------------------ | ---------- |
 | DECISION | REASON              | AUTHOR (JOB_TITLE) | YYYY-MM-DD |
 
-# Appendix D: Decision record for policy specifics
 
