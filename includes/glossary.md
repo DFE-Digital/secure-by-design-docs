@@ -25,3 +25,4 @@
 *[ISO]: Information Security Officer
 *[SRO]: Senior Responsible Officer
 *[RACI]: Responsible Accountable Consulted Informed (matrix)
+*[CIS]: Centre for Internet Security
