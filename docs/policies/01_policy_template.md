@@ -17,22 +17,22 @@ date: 2024-11-21
 | May        | This term is used to state an optional requirement of this policy   |
 
 
-## 1.0 Purpose
+## Purpose
 The purpose of this policy is...
 
-## 2.0 Responsibility
+## Responsibility
 RESPONSIBILITIES 
 
-### 2.1 RACI
+### Responsible Accountable Consulted Informed (RACI) matrix
 
 | Tasks                               | ROLE              | ROLE2          | ROLE3   |
 | ----------------------------------- | ----------------- | -------------- | ------- |
 | TASK                                | R                 | A              | C       |
 
 
-## 3.0 Other responsible owners
+## Other responsible owners
 
-## 4.0 Exceptions
+## Exceptions
 Exceptions to this policy are likely to occur. Request for exceptions may include XXXXX.
 
 Exception requests must be made in writing to the <TEAM> team mailbox (XXXX@education.gov.uk) and must contain: 
@@ -45,25 +45,32 @@ Exception requests must be made in writing to the <TEAM> team mailbox (XXXX@educ
   
 The <TEAM> team should also try and obtain confirmation from the Senior Responsible Officer (SRO) and Service Owner that the <EXCEPTION> has been approved and has been added to the Services Risk Register (where maintained). 
 
-## 5.0 Policy
+## Policy
 
-### 5.1 Policy section
+### Policy section
 
 
-# 6.0 Revision history
+# Revision history and decision records
 
-## 6.1 Revision table
+## Revision table
 
 | Date of change | Author             | Review Date          | Version |
 | -------------- | ------------------ | -------------------- | ------- |
 | YYYY-MM-DD     | FULL_NAME          | YYYY-MM-DD (+1 year) | v0.1    |
 
 
-## 6.2 Approved by
+## Approved by
 
 | Name            | Title     | Date       | Version |
 | --------------- | --------- | ---------- | ------- |
-| FULL_NAME       | TITLE     | YYYY-MM-DD | v0.1    |        
+| FULL_NAME       | TITLE     | YYYY-MM-DD | v0.1    |      
+
+
+## Policy updates and decision record
+| Decision | Reason for decision | Author (Job title) | Date       |
+| -------- | ------------------- | ------------------ | ---------- |
+| DECISION | REASON              | AUTHOR (JOB_TITLE) | YYYY-MM-DD |
+
 
 # Appendix A: Glossary
 
@@ -71,11 +78,7 @@ The <TEAM> team should also try and obtain confirmation from the Senior Responsi
 | ----------------------- | ----------------------- |
 | TERM                    | MEANING                 |
 
-# Appendix B: CIS safeguards mapping
 
-# Appendix C: Decision records and history
-| Decision | Reason for decision | Author (Job title) | Date       |
-| -------- | ------------------- | ------------------ | ---------- |
-| DECISION | REASON              | AUTHOR (JOB_TITLE) | YYYY-MM-DD |
+# Appendix B: Centre for Internet Security (CIS) safeguards mapping
 
 
