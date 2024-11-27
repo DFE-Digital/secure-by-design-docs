@@ -50,23 +50,23 @@ The <TEAM> team should also try and obtain confirmation from the Senior Responsi
 ### Policy section
 
 
-# Revision history and decision records
+## Revision history and decision records
 
-## Revision table
+### Revision table
 
 | Date of change | Author             | Review Date          | Version |
 | -------------- | ------------------ | -------------------- | ------- |
 | YYYY-MM-DD     | FULL_NAME          | YYYY-MM-DD (+1 year) | v0.1    |
 
 
-## Approved by
+### Approved by
 
 | Name            | Title     | Date       | Version |
 | --------------- | --------- | ---------- | ------- |
 | FULL_NAME       | TITLE     | YYYY-MM-DD | v0.1    |      
 
 
-## Policy updates and decision record
+### Policy updates and decision record
 | Decision | Reason for decision | Author (Job title) | Date       |
 | -------- | ------------------- | ------------------ | ---------- |
 | DECISION | REASON              | AUTHOR (JOB_TITLE) | YYYY-MM-DD |
