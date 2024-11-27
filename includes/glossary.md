@@ -24,3 +24,4 @@
 *[SLAs]: Service Level Agreements
 *[ISO]: Information Security Officer
 *[SRO]: Senior Responsible Officer
+*[RACI]: Responsible Accountable Consulted Informed (matrix)
