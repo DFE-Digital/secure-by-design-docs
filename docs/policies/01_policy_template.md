@@ -20,6 +20,9 @@ date: 2024-11-21
 ## Purpose
 The purpose of this policy is...
 
+## Scope
+SCOPE
+
 ## Responsibility
 RESPONSIBILITIES 
 
