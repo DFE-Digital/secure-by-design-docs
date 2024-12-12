@@ -8,21 +8,21 @@ date: 2024-10-22
 ---
 # Welcome
 
-Welcome to the Department for Education Secure-by-Design development documentation.
+Welcome to the Department for Education (DfE)'s Secure by Design (SbD) documentation site.
 
 ## Overview
 
-This is where the SBD team in CISD are going to build out the plans for how CISD and the digital Portfolios will interact with the SBD process.
+The SbD team sits within the Cyber and Information Security Division (CISD). We will use this site to outline and develop plans for how CISD and digital portfolios will interact with the SbD process.
 
-The Portfolios are responsible for achieving and proving SBD compliance in order to get approval for project funding from CDDO. 
+The portfolios are responsible for achieving and proving SbD compliance to get approval for project funding from the Central Digital and Data office (CDDO). 
 
-This site describes how CISD will support the Portfolios through that process.
+We'll include information on this site about how CISD will support portfolios through the SbD process.
 
 
 ## Contact
 
-If you have any questions regarding SBD or would like to enquire about taking advantage of CISD services to meet your SBD requirements, then please contact us on:
+If you have any questions about SbD, or would like to take advantage of CISD services to meet your SbD requirements, please contact us on:
 
-* [the slack working group](https://ukgovernmentdfe.slack.com/archives/C07N27D5SG5)
-* [the open slack channel](https://ukgovernmentdfe.slack.com/archives/C081Q6S91FB)
+* [the SbD working group Slack channel](https://ukgovernmentdfe.slack.com/archives/C07N27D5SG5)
+* [the SbD support Slack channel](https://ukgovernmentdfe.slack.com/archives/C081Q6S91FB)
 * [email](TBC)
