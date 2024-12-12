@@ -2,7 +2,7 @@
 *[DfE]: Department for Education
 *[CISD]: Cyber Information Security Division
 *[CA]: Continuous Assurance
-*[SBD]: Secure by Design
+*[SbD]: Secure by Design
 *[CDDO]: Central Digital and Data Office (Cabinet Office)
 *[SOC]: Security Operations Centre
 *[CISO]: Chief Information Security Officer (Martin Sivorn)
