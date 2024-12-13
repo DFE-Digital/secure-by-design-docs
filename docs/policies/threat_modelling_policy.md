@@ -1,8 +1,12 @@
-title: "Threat Modelling Policy-V0.5"
+---
+title: "Secure by Design threat modelling policy"
 summary: A markdown template for SBD policies
 authors:
     - Simon Bishop
-date: 2024-12-21
+date: 2024-12-13
+---
+
+# Threat modelling policy (Secure by Design)
 
 ## Purpose
 This policy establishes guidelines for conducting threat modelling to identify, assess, and mitigate security threats within XXX. Adoption of a threat modelling standard for threat identification and an information security controls framework, this policy aims to ensure a systematic and consistent approach to managing security risks through the lifecycle of the service offering.  
@@ -51,7 +55,7 @@ A structured process used to identify, assess, and address potential security th
 Threat modelling should leverage input from the following areas of the business described in the sections below.
 
 ### Risk appetite
-Cyber security risk for project should be managed in line with to your organisation’s risk appetite statement. Begin with creating a risk appetite specific to your service/project, talk to the risk management team to understand the organisation’s overall risk acceptance thresholds. For further information review the [SbD Risk Appetite advice](https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/working-out-the-projects-security-risk-appetite/).  
+Cyber security risk for project should be managed in line with to your organisation’s risk appetite statement. Begin with creating a risk appetite specific to your service/project, talk to the risk management team to understand the organisation’s overall risk acceptance thresholds. For further information review the [SbD risk appetite advice](https://www.security.gov.uk/policy-and-guidance/secure-by-design/activities/working-out-the-projects-security-risk-appetite/).  
 
 ### Asset management
 Projects should identify and categorise all in scope physical and information assets, for criticality, and ownership.  
@@ -73,7 +77,7 @@ Threat modelling is dynamic and must:
 The organisation should use a threat modelling methodology as the primary approach to identify and categorise threats across its systems, processes, and assets.  
 
 - [MITRE ATT&CK](https://attack.mitre.org/), [MITRE D3FEND](https://d3fend.mitre.org/) and [MITRE CAPEC](https://capec.mitre.org/) – used to explore possible vulnerabilities and issues that might apply to your service
-- [STRIDE](https://www.gov.uk/government/publications/secure-connected-places-playbook-documents/conducting-a-stride-based-threat-analysis)(Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, and Elevation of privilege) – a model for exploring different threat categories
+- [STRIDE](https://www.gov.uk/government/publications/secure-connected-places-playbook-documents/conducting-a-stride-based-threat-analysis) (Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, and Elevation of privilege) – a model for exploring different threat categories
 - [attack trees](https://www.ncsc.gov.uk/collection/risk-management/using-attack-trees-to-understand-cyber-security-risk) – for representing the paths adversaries may use to attack your service so you can design solutions to prevent them
 - a threat modelling framework should apply during the design, development, and review phases of systems and applications to identify potential threat events or attack paths.  
 - identified threats should be mapped to business processes, technical components, and operational activities.  
@@ -107,9 +111,39 @@ The following must be considered when using collecting, analysing and sharing th
 ## Related policies
 The following polices are associated with this policy and should also be read as they directly interact or support the policy:
 
-- Vulnerability Management Policy
+- [Vulnerability Management Policy](vulnerability_management_policy.md)
 - Incident Management Policy
 - Security Monitoring Policy
 - Asset Management Policy (TBC)
 - Risk Management Policy (TBC)
 - Supplier Management Policy (TBC)
+
+## Revision history
+
+### Revision table
+
+| Date of change | Author             | Review Date          | Version |
+| -------------- | ------------------ | -------------------- | ------- |
+| YYYY-MM-DD     | FULL_NAME          | YYYY-MM-DD (+1 year) | v0.1    |
+
+
+### Approved by
+
+| Name            | Title     | Date       | Version |
+| --------------- | --------- | ---------- | ------- |
+| FULL_NAME       | TITLE     | YYYY-MM-DD | v0.1    |        
+
+### Policy updates and decision record
+
+| Decision | Reason for decision | Author (Job title) | Date       |
+| -------- | ------------------- | ------------------ | ---------- |
+|          |                     |                    | 2024-03-07 |
+
+# Appendix A: Glossary
+
+| Term                    | Meaning in this context |
+| ----------------------- | ----------------------- |
+|                         |                         |
+
+
+# Appendix B: Centre for Internet Security (CIS) safeguards mapping
