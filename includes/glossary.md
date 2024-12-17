@@ -26,3 +26,16 @@
 *[SRO]: Senior Responsible Officer
 *[RACI]: Responsible Accountable Consulted Informed (matrix)
 *[CIS]: Centre for Internet Security
+*[CTI]: Cyber Threat Intelligence 
+*[TI]: Threat Intelligence 
+*[IOCs]: Indicators of Compromise
+*[TTPs]: Tactics, Techniques and Procedures.
+*[TIP]: Threat Intelligence Platform
+*[CVE]: Common Vulnerabilities and Exposures
+*[WARP]: Warning Advice and Reporting Point
+*[NCSC]: National Cyber Security Centre 
+*[CI/CD]: Continuous Integration/Continuous Deployment
+*[CiSP]: Cyber security information Sharing Partnership
+*[TBC]: To Be Confirmed 
+*[OSINT]: Open Source Intelligence
+*[IP]: Internet Protocol
