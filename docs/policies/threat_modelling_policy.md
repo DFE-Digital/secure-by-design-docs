@@ -1,6 +1,6 @@
 ---
 title: "Secure by Design threat modelling policy"
-summary: A markdown template for SBD policies
+summary: A threat modelling policy to incorporate the requirements of CDDO's Secure by Design for DfE
 authors:
     - Simon Bishop
 date: 2024-12-13
