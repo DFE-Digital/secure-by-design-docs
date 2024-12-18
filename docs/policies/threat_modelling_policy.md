@@ -34,7 +34,7 @@ Exceptions to this policy are likely to occur. Exception requests shall be made 
 
 ## Responsible Accountable Consulted Informed (RACI)
 
-|       Tasks                              | CISO           | SRO | Project / operations security leads | Development / operations teams  |   
+|       Role<br><br>Activity               | CISO           | SRO | Project / operations security leads | Development / operations teams  |   
 |------------------------------------------|----------------|-----|-------------------------------------|---------------------------------|
 | Define and enable strategy               | R              | C   | I                                   | I                               |
 | Risk appetite                            | R              | C   | I                                   | I                               |
