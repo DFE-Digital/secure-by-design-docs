@@ -23,7 +23,7 @@ The purpose of this policy is to establish the use of threat intelligence within
 ## Scope
 This policy applies to new projects or significant changes (for example, those requiring a treasury business case or those where there is significant change to the cyber risk profile) to digital service and technology infrastructure either built within teams or procured through suppliers which are in scope of [digital and technology spend controls](https://www.gov.uk/government/publications/digital-and-technology-spend-control-version-6) approval process.
 
-It covers the management and use of internal and external threat intelligence data and applies to all technology and software products and services developed, tested, deployed, operated and maintained by the DfE. This includes third party software and services directly used in the delivery or support of DfE services.
+It covers the management and use of internal and external threat intelligence data and applies to all technology and software products and services developed, tested, deployed, operated and maintained by DfE. This includes third party software and services directly used in the delivery or support of DfE services.
 
 This policy includes employees, contractors, and third-party service providers involved in DfE’s threat intelligence creation and use activities across project lifecycles, from start to finish (concept to retirement/disposal).
 
@@ -35,9 +35,9 @@ The objectives of this policy are to:
 - support risk management by proactively identifying and mitigating significant cyber threats at earliest opportunity
 - protect critical assets, systems, and data
 - inform incident management, response and recovery efforts
-- ensure departmental staff are aware of threats to the cyber security posture of the DfE
-- protect the brand and reputation of the DfE
-- support the secure by design lifecycle and operational practices by continuously updating threat intelligence, to reduce risks to the DfE
+- ensure departmental staff are aware of threats to the cyber security posture of DfE
+- protect the brand and reputation of DfE
+- support the secure by design lifecycle and operational practices by continuously updating threat intelligence, to reduce risks to DfE
 
 
 ## Responsibility
@@ -51,7 +51,7 @@ This role is responsible for the development and implementation of threat intell
 
 ### Senior Responsible Owners (SRO)
 
-Staff in this role ensure that programmes and projects within their area of responsibility utilise threat intelligence as part of their secure by design project delivery methodologies as stated in threat intelligence use section of this policy.
+Staff in this role ensure that programmes and projects within their area of responsibility utilise threat intelligence as part of their secure by design project delivery methodologies as stated in [the threat intelligence use section](#threat-intelligence-use) of this policy.
 
 
 ### Cyber Threat Intelligence (CTI) team
@@ -73,7 +73,7 @@ They are also responsible for sharing Threat Intelligence collected by their tea
 
 ### Incident management teams
 
-These teams are responsible for ensuring capability is in place so significant threats to the DfE can be detected, contained, mitigated and recovered from.
+These teams are responsible for ensuring capability is in place so significant threats to DfE can be detected, contained, mitigated and recovered from.
 
 
 ### Security monitoring teams
@@ -83,7 +83,7 @@ The security monitoring teams are responsible for using threat intelligence to e
 
 ### Learning and development and end users
 
-Learning and development teams are responsible for ensuring training and awareness programmes are prioritised based on the threats relevant to the DfE.
+Learning and development teams are responsible for ensuring training and awareness programmes are prioritised based on the threats relevant to DfE.
 
 End users are responsible for keeping themselves aware of the threats to the department and raising security concerns / reporting security incidents based on these threats.
 
@@ -92,8 +92,8 @@ End users are responsible for keeping themselves aware of the threats to the dep
 
 Supplier and third-party management teams are responsible for ensuring third party vendors and partners:
 
-- share threat intelligence that could impact the DfE’s security posture
-- take appropriate action on threat intelligence passed to them from the DfE
+- share threat intelligence that could impact DfE’s security posture
+- take appropriate action on threat intelligence passed to them from DfE
   
 
 ### Responsible Accountable Consulted Informed (RACI) matrix
@@ -118,7 +118,7 @@ Supplier and third-party management teams are responsible for ensuring third par
 Exceptions to this policy are likely to occur. Exception requests shall be made by email to the policy owner identified in the [Revision history](#revision_history) and must contain:
 
 - the reason for the request
-- risk to the DfE of not following the written policy
+- risk to DfE of not following the policy
 - specific mitigations that will not be implemented
 - technical and other difficulties
 - date of review
@@ -138,13 +138,13 @@ Threat Intelligence (TI) refers to data that allows organisations to identify wh
 
 ## Threat intelligence categories
 
-To support the threat intelligence objectives outlined above, the DfE must collect tactical, operational, and strategic threat intelligence for the following purposes:
+To support the threat intelligence objectives outlined above, DfE must collect tactical, operational, and strategic threat intelligence for the following purposes:
 
 - tactical threat intelligence – information about specific indicators of compromise and malware signatures associated with threat actors, for action by developers and operational support teams
 - operational threat intelligence – information about the Tactics, Techniques, and Procedures (TTPs) used by threat actors, for the development of counter measures by development and operational security teams
 - strategic threat intelligence – provision of high-level overviews of threat landscape, for communication with the senior management team as part of strategic decision-making
 
-The DfE will collect threat intelligence from external sources in support of the objectives outlined above, considering factors including (but not limited to):
+DfE will collect threat intelligence from external sources in support of the objectives outlined above, considering factors including (but not limited to):
 
 - relevance of the data (for example, industry sector or threat actor trends)
 - reputation of source for quality and timeliness of data
@@ -202,21 +202,21 @@ DfE teams should actively use threat intelligence to help manage risk in the fol
 
 ### Risk management
 
-Threat Intelligence should be used to inform the Threat Assessment and following Risk Assessment activities of the DfE and its projects. Threats identified from the threat assessment shall be fed back to the threat intelligence teams for inclusion into the threat intelligence process.
+Threat intelligence should be used to inform the threat assessment and following risk assessment activities of DfE and its projects. Threats identified from the threat assessment shall be fed back to the threat intelligence team for inclusion into the threat intelligence process.
 
 
 ### Threat modelling
 
-Threat intelligence updates msut be used during threat modelling as defined by the threat modelling policy, ensuring that development efforts address any new vulnerabilities or attack techniques.
+Threat intelligence updates must be used during threat modelling as defined by the threat modelling policy, ensuring that development efforts address any new vulnerabilities or attack techniques.
 
-New threats identified during threat modelling must be fed back to the threat intelligence teams for inclusion into the threat intelligence process.
+New threats identified during threat modelling must be fed back to the threat intelligence team for inclusion into the threat intelligence process.
 
 During the operational lifecycle, threat intelligence must be used to inform and update threat models whenever there is significant change to the projects mission, threat landscape or technology. This will ensure that projects remain resilient to known threats, with new threats being integrated into the design/maintain/operate life cycle.
 
 
 ### Vulnerability management
 
-Threat intelligence must be fed into vulnerability management processes to ensure that identified vulnerabilities from known threats are detected and addressed within the DfE estate soon as practicable.
+Threat intelligence must be fed into vulnerability management processes to ensure that identified vulnerabilities from known threats are detected and addressed within DfE estate soon as practicable.
 
 
 ### Incident management
@@ -268,7 +268,7 @@ The following must be considered when using collecting, analysing and sharing th
 
 ## Performance monitoring and review
 
-The quality (accuracy and timeliness) of threat intelligence sources and effectiveness of its use within the DfE should be regularly assessed to ensure threats are addressed early in project lifecycles.
+The quality (accuracy and timeliness) of threat intelligence sources and effectiveness of its use within DfE should be regularly assessed to ensure threats are addressed early in project lifecycles.
 
 The effectiveness of threat intelligence should be measured using metrics such as:
 
@@ -276,9 +276,9 @@ The effectiveness of threat intelligence should be measured using metrics such a
 - number of threats detected and mitigated
 - time to detect and respond to incidents
 
-This policy must be reviewed annually or after significant changes to the DfE’s mission objectives, threat landscape or significant changes in delivery methodologies.
+This policy must be reviewed annually or after significant changes to DfE’s mission objectives, threat landscape or significant changes in delivery methodologies.
 
-## Related Policies
+## Related policies
 
 The following documents are associated with this policy and should also be read as they directly interact with or support the policy:
 
