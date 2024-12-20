@@ -111,20 +111,21 @@ The following must be considered when using collecting, analysing and sharing th
 ## Related policies
 The following polices are associated with this policy and should also be read as they directly interact or support the policy:
 
-- [Vulnerability Management Policy](vulnerability_management_policy.md)
-- Incident Management Policy
-- Security Monitoring Policy
-- Asset Management Policy (TBC)
-- Risk Management Policy (TBC)
-- Supplier Management Policy (TBC)
+- [Vulnerability management policy](vulnerability_management_policy.md)
+- [Threat intelligence policy](threat_intelligence_policy.md)
+- Incident management policy
+- Security monitoring policy
+- Asset management policy (TBC)
+- Risk management policy (TBC)
+- Supplier management policy (TBC)
 
 ## Revision history
 
 ### Revision table
 
-| Date of change | Author             | Review Date          | Version |
-| -------------- | ------------------ | -------------------- | ------- |
-| YYYY-MM-DD     | FULL_NAME          | YYYY-MM-DD (+1 year) | v0.1    |
+| Date of change | Author             | Review Date | Version |
+| -------------- | ------------------ | ----------- | ------- |
+| 2024-12-20     | Simon Bishop       | 2025-12-20  | v0.1    |
 
 
 ### Approved by
