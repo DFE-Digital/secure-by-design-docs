@@ -43,10 +43,10 @@ The Cyber and Information Security Division (CISD) Security Incident Management 
 
 The analysis must include the following information:
 
-•	identification of type of incident
-•	assessment of impact
-•	assessment of the scale of the incident
-•	identification of classification or type of incident
+* identification of type of incident
+* assessment of impact
+* assessment of the scale of the incident
+* identification of classification or type of incident
 
 New services in scope for SbD implementation must manage security incidents ‘in house’ and portfolios and services who choose to manage security incidents ‘in house’ must report any incident through the IT Help Centre immediately on incident identification. This is so the SIM team are aware and have oversight of the incident in the event escalation or further support is required.
 Incidents managed ‘in house’ must not be above a Priority 4 (refer to Appendix 1, Criticality Matrix) without agreement and oversight from the SIM team as they may require some co-ordination to ensure an effective resolution.
@@ -83,19 +83,29 @@ Service Owners (SO) are responsible for ensuring that services are designed and 
 
 The Cyber and Information Security division must develop and maintain the framework that all incident response plans must adhere to. All DfE incident response plans must:
 
-•	be documented and approved
-•	include an incident response process
-•	be reviewed annually or following significant changes within DfE, if necessary 
-•	a review may also occur following an incident or planned training exercise
+* be documented and approved
+* include an incident response process
+* be reviewed annually or following significant changes within DfE, if necessary 
+* a review may also occur following an incident or planned training exercise
 
 They must also include: 
 
-•	a named incident manager and suitable back up incident managers assigned during working hours
-•	if an external party is the incident manager, then an internal individual must be specified to oversee the response process
-•	contact information 
-•	contact information for parties that need to be informed of security incidents must be maintained by the SIM team - internal contact information may be collected from DfE data sources, where appropriate 
-•	address any regulatory or other compliance requirements
-•	address communication options (for example, calls and emails) during an incident 
+* a named incident manager and suitable back up incident managers assigned during working hours
+* if an external party is the incident manager, then an internal individual must be specified to oversee the response process
+* contact information 
+ - contact information for parties that need to be informed of security incidents must be maintained by the SIM team - internal contact information may be collected from DfE data sources, where appropriate 
+* address any regulatory or other compliance requirements
+* address communication options (for example, calls and emails) during an incident 
+
+## Security incident process
+
+The SIM team must develop and maintain a written process to enable the reporting of security incidents. This must include:
+
+* primary and secondary methods for reporting (including out of hours)
+* the minimum information needed
+* timeframes for reporting incidents
+
+At a minimum, the incident reporting process must be reviewed on an annual basis or following significant changes within DfE. 
 
 ## Security incident reporting
 
