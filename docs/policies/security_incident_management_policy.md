@@ -1,5 +1,5 @@
 ---
-title: "Secure by Design vulnerability management policy"
+title: "Secure by Design security incident management policy"
 summary: The secure by design policy for security incident management.
     - Amie Easey
 date: 2024-12-20
@@ -15,8 +15,8 @@ date: 2024-12-20
 
 ## Purpose 
 
-The purpose of this policy is to minimise the immediate and long-term business and reputational impact of incidents that have the potential to affect the confidentiality, integrity, or availability of DfE (Department for Education) systems and / or information to enable DfE to react to incidents in a structured and cohesive manner.
-All DfE impacting security incidents must be reported and managed through the established security incident processes. DfE impacting incidents can include those led by the Government Security Group (GSG), Arm’s Length Bodies (ALBs), and major vulnerabilities which require the incident framework for effective management.
+The purpose of this policy is to minimise the immediate and long-term business and reputational impact of incidents that have the potential to affect the confidentiality, integrity, or availability of DfE (Department for Education) systems and / or information and to enable DfE to react to incidents in a structured and cohesive manner.
+All security incidents must be reported and managed through the established security incident processes. Incidents that impact DfE can include those led by the Government Security Group (GSG), Arm’s Length Bodies (ALBs), and major vulnerabilities which require the incident framework for effective management.
 This policy is Centre for Internet Security (CIS), Secure by Design (SbD) and Cyber Assessment Framework (CAF) compliant. 
 
 ## Scope 
@@ -27,7 +27,7 @@ New services in scope for SbD implementation must build and maintain capability 
 
 ## Definition
 
-The Government Functional Standard GovS 007: Security defines a security incident as:
+!!! abstract [The Government Functional Standard GovS 007: Security](https://www.gov.uk/government/publications/government-functional-standard-govs-007-security) defines a security incident as:
 ‘Any circumstance that has arisen contrary to policy and that has the potential to compromise His Majesty’s Government (HMG) assets. Assets include people, property, or information. The circumstance may include actions that were actual or suspected; accidental, deliberate or attempted. “Compromise” is to bring the asset into disrepute or danger’.
 
 An incident in the workplace is an unplanned event that could result in injury, could cause damage to property/departmental assets/information and poses significant risk to merit action and recording. 
@@ -81,7 +81,7 @@ Service Owners (SO) are responsible for ensuring that services are designed and 
 
 ## Security incident plan 
 
-The Cyber and Information Security division must develop and maintain the framework that all incident response plans must adhere to. All DfE incident response plans must:
+CISD must develop and maintain the framework that all incident response plans must adhere to. All DfE incident response plans must:
 
 * be documented and approved
 * include an incident response process
@@ -158,7 +158,7 @@ You can contact the SIM team for further information on how to conduct post inci
 
 | Date of change | Author            | Review Date | Version |
 | -------------- |-------------------|-------------|---------|
-| 2024-12-20     | Amie Easey        |2024 – 12 – 20 (+1 year)| v4.1 | 
+| 2024-12-20     | Amie Easey        |2025–12–20| v4.1 | 
 
 ### Approved by 
 
@@ -175,30 +175,7 @@ You can contact the SIM team for further information on how to conduct post inci
 ## Appendix A: Security incident management criticality matrix 
 TBC
 
-## Appendix B: Acronyms and abbreviations
-
-|Term |Definition|
-|-----|----------|
-|ALBs	|Arm’s Length Bodies|
-|CIS|	Centre for Internet Security|
-|CIS| Controls	Centre for Internet Security Critical Security Controls|
-|CISO| Chief Information Security Officer|
-|DDT|	Digital Data Technology|
-|DfE|	Department for Education|
-|GSG|	Government Security Group|
-|IG|	Implementation Group|
-|ISAC|	Information Sharing and Analysis Centre|
-|IT|	Information Technology|
-|MIM|	Major Incident Management|
-|NCSC|	National Cyber Security Centre|
-|SbD|	Secure by Design|
-|SO|Service Owner|
-|SOC|	Security Operations Centre|
-|SIM|	Security Incident Management|
-|SRO|	Senior Responsible Owner|
-|SSA|	Senior Security Advisor|
-
-## Appendix C
+## Appendix B
 
 |Term |Description|
 |-----|----------|
@@ -213,7 +190,7 @@ TBC
 |Vulnerability|	A vulnerability is any weakness within an organisation’s information systems, internal controls, or system processes that can be exploited by cybercriminals.|
 |Virtual environment|	Simulates hardware to allow a software environment to run without the need to use a lot of actual hardware. Virtualised environments are used to make a small number of resources act as many with plenty of processing, memory, storage, and network capacity. Virtualisation is a fundamental technology that allows cloud computing to work.|
 
-## Appendix D
+## Appendix C
 
 CIS controls and safeguards covered by this policy. 
 This policy helps to bolster all Implementation Group (IG) safeguards (IG1, IG2 and IG3) in CIS Control 17: Incident response management. This table shows which IG safeguards are covered by this policy
@@ -230,12 +207,12 @@ This policy helps to bolster all Implementation Group (IG) safeguards (IG1, IG2 
 |17.8	|IG2|	Conduct post-incident reviews| Post-incident reviews help prevent incident recurrence and identify lessons learned and follow-up action.
 |17.9	|IG3|	Establish and maintain security incident thresholds|	Establish and maintain security incident thresholds, including, at a minimum, differentiating between an incident and an event. Examples can include abnormal activity, security vulnerability, security weakness, data breach, privacy incident, etc. Review annually, or when significant organisation changes occur that could impact this safeguard.|
 
-## Appendix E: Related references, links and documents
+## Appendix D: Related references, links and documents
 
 * [National Cyber Security Centre (NCSC) 10 steps to Cyber Security](https://www.ncsc.gov.uk/collection/10-steps)
-* [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles
-* [NCSC Cyber Essentials](https://www.ncsc.gov.uk/cyberessentials/overview
-* [The 18 Centre for Internet Security (CIS) Critical Security Controls](https://www.cisecurity.org/controls/cis-controls-list
+* [NCSC Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud/the-cloud-security-principles)
+* [NCSC Cyber Essentials](https://www.ncsc.gov.uk/cyberessentials/overview)
+* [The 18 Centre for Internet Security (CIS) Critical Security Controls](https://www.cisecurity.org/controls/cis-controls-list)
 * [ISO 27001](https://www.iso.org/standard/27001)
 * [ISO 27002](https://www.iso.org/standard/75652.html) 
 * [Computer Misuse Act 1990](https://www.legislation.gov.uk/ukpga/1990/18/contents)
