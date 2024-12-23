@@ -51,6 +51,7 @@
 *[SOC]: Security Operations Centre
 *[SIM]: Security Incident Management
 *[SSA]: Senior Security Advisor
+*[CAF]: Cyber Assessment Framework
 
 
 
