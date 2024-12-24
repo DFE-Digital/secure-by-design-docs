@@ -52,7 +52,8 @@
 *[SIM]: Security Incident Management
 *[SSA]: Senior Security Advisor
 *[CAF]: Cyber Assessment Framework
-
+*[CDO]: Chief Digital Officer
+*[CTO]: Chief Technology Officer
 
 
 
