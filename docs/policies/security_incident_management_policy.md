@@ -16,22 +16,30 @@ date: 2024-12-20
 ## Purpose 
 
 The purpose of this policy is to minimise the immediate and long-term business and reputational impact of incidents that have the potential to affect the confidentiality, integrity, or availability (CIA) of DfE (Department for Education) systems and / or information and to enable DfE to react to incidents in a structured and cohesive manner.
+
 All security incidents must be reported and managed through the established security incident processes. Incidents that impact DfE can include those led by the Government Security Group (GSG), Arm’s Length Bodies (ALBs), and major vulnerabilities which require the incident framework for effective management.
 This policy is Centre for Internet Security (CIS), Secure by Design (SbD) and Cyber Assessment Framework (CAF) compliant. 
 
 ## Scope 
 
 This policy is for all security incidents affecting DfE IT systems, services, and digital data information, assets and people that are reported and managed through the IT Help Centre.
+
 This policy is applicable to all DfE employees and third-party staff (for example, consultants, resource company employees, temporary employees) that use or have access to DfE systems and / or information. 
+
 New services in scope for SbD implementation must build and maintain capability to manage Priority 4 (P4) security incidents internally, at the portfolio and service level. This will be referred to as 'in house' throughout this document.
 
 ## Definition
 
-!!! abstract [The Government Functional Standard GovS 007: Security](https://www.gov.uk/government/publications/government-functional-standard-govs-007-security) defines a security incident as:
-'Any circumstance that has arisen contrary to policy and that has the potential to compromise His Majesty’s Government (HMG) assets. Assets include people, property, or information. The circumstance may include actions that were actual or suspected; accidental, deliberate or attempted. “Compromise” is to bring the asset into disrepute or danger'.
+!!! abstract "[The Government Functional Standard GovS 007: Security](https://www.gov.uk/government/publications/government-functional-standard-govs-007-security) definition of a security incident"
+        Any circumstance that has arisen contrary to policy and that has the potential 
+        to compromise His Majesty’s Government (HMG) assets. Assets include people, property, 
+        or information. The circumstance may include actions that were actual or suspected; 
+        accidental, deliberate or attempted. “Compromise” is to bring the asset into disrepute or danger.
 
 An incident in the workplace is an unplanned event that could result in injury, could cause damage to property/departmental assets/information and poses significant risk to merit action and recording. 
+
 It can also refer to any event that compromises or threatens the CIA of an organisation’s assets. Incidents can include a wide range of events, encompassing physical, personnel, cyber and technical security.
+
 Managing and responding to incidents is a critical aspect of protective security to prevent or minimise potential damage and protect sensitive information and resources.
 
 ## Responsibility
@@ -39,6 +47,7 @@ Managing and responding to incidents is a critical aspect of protective security
 The Chief Information Security Officer (CISO) must be ultimately responsible for the management of all information security incidents.
 
 The Senior Security Advisor (SSA) must be ultimately responsible for the management and resolution of all physical security and personnel security incidents.
+
 The Cyber and Information Security Division (CISD) Security Incident Management (SIM) team must ensure all incidents are assessed as soon as possible so that a priority can be assigned and the most appropriate course of action can be given for their resolution. The response to an incident is likely to require the skill and expertise of various groups within DfE (for example, IT, operations, legal and human resources) as well as external agencies (for example, police authority and forensic specialists).
 
 The analysis must include the following information:
@@ -49,14 +58,16 @@ The analysis must include the following information:
 * identification of classification or type of incident
 
 New services in scope for SbD implementation must manage security incidents 'in house' and portfolios and services who choose to manage security incidents 'in house' must report any incident through the IT Help Centre immediately on incident identification. This is so the SIM team are aware and have oversight of the incident in the event escalation or further support is required.
+
 Incidents managed 'in house' must not be above a Priority 4 (refer to [Appendix A: Security incident management criticality matrix](#appendix-a-security-incident-management-criticality-matrix)) without agreement and oversight from the SIM team as they may require some co-ordination to ensure an effective resolution.
+
 DfE must have policies and processes in place for reporting, managing, and resolving any information security incidents. All actions and decisions made during the response to incidents must be recorded.
 
 ## Responsible Accountable Consulted Informed (RACI) matrix
 
 Where there is more than one role in a box this indicates the responsibility and whether the person or team is consulted or informed may change based on the team managing the incident (SIM team or 'in house' by portfolios and services), the incident priority (whether it is a P1, P2, P3 or P4) and is subject to change based on the incident itself.
 
-| Role<br><br>Activity                | CISO  | Head of Security Operations  | SIM Team | SOC | SRO / SO |Portfolios and Services| Staff|Relevant teams (for example, networks)|P1 Escalation Teams|  
+| Role<br><br>Activity                | CISO  | Head of Security Operations  | SIM Team | SOC | SRO / SO |Portfolios and Services| Staff|Relevant teams (for example, networks)|P1 Escalation Teams[^1]|  
 |-------------------------------------|-------|------------------------------|---------|------|----------|-----------------------|------|--------------------------------------|--------------------|
 | Reporting a security incident| R /A |R| R / I|R|R|R|R|R||
 | Triage and manage P1 incidents| A | C | R |C||||C|C / I|
@@ -71,11 +82,12 @@ Where there is more than one role in a box this indicates the responsibility and
 |Policy and strategy| A/ R| C| I|I|I|I|I|I|I|
 |Awareness| I|I| R|I|I|R|I|C / I||
  
-P1 Escalation Teams include the National Cyber Security Centre (NCSC), the Gold Team, BAE Systems and Government Security Group (GSG) who may be consulted / informed during a P1 incident. See [Appendix A: Security incident management criticality matrix](#appendix-a-security-incident-management-criticality-matrix) if necessary.[^1]
+[^1]: P1 Escalation Teams include the National Cyber Security Centre (NCSC), the Gold Team, BAE Systems and Government Security Group (GSG) who may be consulted / informed during a P1 incident. See [Appendix A: Security incident management criticality matrix](#appendix-a-security-incident-management-criticality-matrix) if necessary.
 
 ## Exceptions 
 
 There are no acceptable exceptions for this policy.
+
 Service Owners (SO) are responsible for ensuring that services are designed and operated in line with this policy. They are also responsible for ensuring that all users of their services understand their obligation to report information security incidents and have a mechanism to do so.
 
 ## Security incident plan 
@@ -92,7 +104,7 @@ They must also include:
 * a named incident manager and suitable back up incident managers assigned during working hours
 * if an external party is the incident manager, then an internal individual must be specified to oversee the response process
 * contact information 
- - contact information for parties that need to be informed of security incidents must be maintained by the SIM team - internal contact information may be collected from DfE data sources, where appropriate 
+     * contact information for parties that need to be informed of security incidents must be maintained by the SIM team - internal contact information may be collected from DfE data sources, where appropriate 
 * address any regulatory or other compliance requirements
 * address communication options (for example, calls and emails) during an incident 
 
@@ -109,7 +121,9 @@ At a minimum, the incident reporting process must be reviewed on an annual basis
 ## Security incident reporting
 
 The SIM team must ensure that any incident reported which could potentially be a cyber incident or affect the security of information is managed appropriately, whether that is by the SIM team themselves or by portfolios and services 'in house'.
+
 The incident must be reported through a formal security incident management process.
+
 The incident must be reported immediately, wherever practical, even if unconfirmed or when full details are not known, but always within 24 hours of discovery. If an incident is not reported within 24 hours the reporter must provide an explanation for the delay.
 The process must be simple, clear, and easy to follow. It should follow the below guidelines:
 
@@ -125,6 +139,7 @@ The reporting method should be easily available to all DfE staff and capture the
 * contact details to get further information
 
 All DfE staff are responsible for reporting security incidents and must be made aware of what constitutes a security incident and how to report them. This applies to DfE employees and consultants, resource company employees and temporary staff using DfE systems and / or information.
+
 Security incident management must be incorporated into all third party and outsourced contracts.
 
 For further information on what a security incident is and how to report a security incident,  refer to the [Report a security incident guidance](https://educationgovuk.sharepoint.com/sites/security/SitePages/incident-reporting.aspx). 
@@ -132,6 +147,7 @@ For further information on what a security incident is and how to report a secur
 ## Collection of evidence
 
 DfE must engage law enforcement authorities at the earliest opportunity (using recognised DfE channels) if an incident is suspected to have been caused by criminal activities, or if legal action is anticipated. 
+
 Steps must be taken so that the collection of any evidence necessary for a successful prosecution is not intentionally or accidentally altered or destroyed. Guidance must be sought from suitably qualified forensic experts in relation to evidence gathering.
 
 ## Incident recovery
@@ -157,19 +173,19 @@ You can contact the SIM team for further information on how to conduct post inci
 
 | Date of change | Author            | Review Date | Version |
 | -------------- |-------------------|-------------|---------|
-| 2024-12-20     | Amie Easey        |2025–12–20| v4.1 | 
+| 2024-12-20     | Amie Easey        | 2025–12–20  | v4.1    | 
 
 ### Approved by 
 
 | Name            | Title     | Date       | Version |
 | --------------- | --------- | ---------- | ------- |
-|Martin Sivorn | CISO| TBD | v4.1 | 
-|
+| Martin Sivorn   | CISO      | TBD        | v4.1    | 
+
 ### Policy updates and decision record
 
 | Decision | Reason for decision | Author (Job title) | Date |
 |----------|-----------------|------|-----|
-|Review    |Draft for discussion with portfolios and services, SIM team and other relevant parties|SbD IM Workstream Lead|2024-12-20
+| Review   | Draft for discussion with portfolios and services, SIM team and other relevant parties | SbD IM Workstream Lead | 2024-12-20 |
 
 ## Appendix A: Security incident management criticality matrix 
 TBC
