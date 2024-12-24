@@ -39,3 +39,21 @@
 *[TBC]: To Be Confirmed 
 *[OSINT]: Open Source Intelligence
 *[IP]: Internet Protocol
+*[ALB]: Arm's Length Body
+*[ALBs]: Arm's Length Bodies
+*[DDT]: Digital Data Technology
+*[GSG]: Government Security Group
+*[IG]: Implementation Group
+*[ISAC]: Information Sharing and Analysis Centre
+*[IT]: Information Technology
+*[MIM]: Major Incident Management
+*[SO]: Service Owner
+*[SOC]: Security Operations Centre
+*[SIM]: Security Incident Management
+*[SSA]: Senior Security Advisor
+*[CAF]: Cyber Assessment Framework
+*[CDO]: Chief Digital Officer
+*[CTO]: Chief Technology Officer
+
+
+
