@@ -190,7 +190,7 @@ You can contact the SIM team for further information on how to conduct post inci
 ## Appendix A: Security incident management criticality matrix 
 TBC
 
-## Appendix B
+## Appendix B: Glossary
 
 |Term |Description|
 |-----|----------|
@@ -205,10 +205,10 @@ TBC
 |Vulnerability|	A vulnerability is any weakness within an organisation’s information systems, internal controls, or system processes that can be exploited by cybercriminals.|
 |Virtual environment|	Simulates hardware to allow a software environment to run without the need to use a lot of actual hardware. Virtualised environments are used to make a small number of resources act as many with plenty of processing, memory, storage, and network capacity. Virtualisation is a fundamental technology that allows cloud computing to work.|
 
-## Appendix C
+## Appendix C: CIS safeguards mapping
 
 CIS controls and safeguards covered by this policy. 
-This policy helps to bolster all Implementation Group (IG) safeguards (IG1, IG2 and IG3) in CIS Control 17: Incident response management. This table shows which IG safeguards are covered by this policy
+This policy helps to bolster all Implementation Group (IG) safeguards (IG1, IG2 and IG3) in CIS Control 17: Incident response management. The table shows which IG safeguards are covered by this policy:
 
 |CIS control |IG safeguard level| CIS safeguard title | CIS safeguard description|
 |-----|-------------------------|--------------------|---------------------------|
