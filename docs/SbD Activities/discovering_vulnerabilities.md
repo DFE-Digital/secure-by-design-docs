@@ -88,7 +88,7 @@ Due to our high usage of GitHub and the fact that GitHub ships with Dependabot f
 
 ### Nuget in Azure DevOps
 
-For those using .NET in Azure DevOps, and example template is available to enable Azure pipelines to audit for vulnerabilities in dependencies and then raise alerts and break builds. The dotnet cli has the capability to run the audit, and with some extra PowerShell you can collect that information and produce alerts.
+For those using .NET in Azure DevOps, an example template is available to enable Azure pipelines to audit for vulnerabilities in dependencies and then raise alerts and break builds. The dotnet cli has the capability to run the audit, and with some extra PowerShell you can collect that information and produce alerts.
 
 [The full template file can be found in the root of this respository](https://github.com/DFE-Digital/secure-by-design-docs/blob/main/dotnet-dependency-audit-azure-devops.yml).
 
