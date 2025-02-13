@@ -1,0 +1,103 @@
+parameters:
+- name: 'RunDepAudit'
+  type: boolean
+  default: true
+
+- name: 'DependencyAuditRiskLevel'
+  type: string
+  default: 'High'
+  values:
+    - Critical
+    - High
+    - Moderate
+    - Low
+
+- name: NugetFeed
+  displayName: Nuget Feed to Get Package(s) from.
+  type: string
+  default: dct-pkg
+  values:
+    - Titan
+    - dct-pkg
+
+- name: AgentPool
+  type: string
+  default: Titan-Build-Windows
+  values:
+  - Azure Pipelines
+  - Titan
+  - Titan-Build-Linux
+  - Titan-Build-Windows
+
+jobs:
+- job: RunDependencyAudit 
+  displayName: Run Dependency Audit 
+  #dependsOn: ${{ parameters.DependsOn }}
+  condition: and(succeeded(), eq(${{ parameters.RunDepAudit }}, 'True'))
+  pool:
+    name: ${{ parameters.AgentPool }} 
+    demands:
+    - agent.os -equals Windows_NT  # Need to run on a Windows VM
+
+  steps: 
+    - task: DeleteFiles@1
+      displayName: Delete non require dev files
+      inputs:
+        Contents: |
+          **/zz.docker.settings.env
+          **/appsettings.*.json
+          !**/appsettings.Debug.json
+          !**/appsettings.Release.json
+  
+    - task: DotNetCoreCLI@2
+      displayName: Dotnet Restore
+      inputs:
+        command: restore
+        projects: |
+          $(Build.SourcesDirectory)/**/*.csproj
+          !$(Build.SourcesDirectory)/**/*Backup*csproj
+          !$(Build.SourcesDirectory)/**/Web/**/*.csproj
+          !$(Build.SourcesDirectory)/**/Desktop/**/*.csproj
+        vstsFeed: ${{ parameters.NugetFeed }}
+
+    - task: PowerShell@2
+      displayName: Read output
+      continueOnError: true
+      inputs:
+        targetType: 'inline'
+        script: |
+          $vulnerablePackages = @()
+          $riskLevels = @{
+            "Critical" = 4
+            "High" = 3
+            "Moderate" = 2
+            "Low" = 1
+          }
+          $minRiskLevel = $riskLevels["${{ parameters.DependencyAuditRiskLevel }}"]
+
+          $paths = Get-ChildItem -Path $(Build.SourcesDirectory) -Recurse -Include *.csproj -Exclude *Backup* -Name 
+          
+          foreach ($path in $paths) {
+            Write-Host $path
+            $output = dotnet list $(Build.SourcesDirectory)/$path package --vulnerable --include-transitive --format json
+            $jsonOutput = $output | Out-String | ConvertFrom-Json
+
+            foreach ($project in $jsonOutput.projects) {
+              foreach ($framework in $project.frameworks) {
+                foreach ($package in $framework.topLevelPackages + $framework.transitivePackages) {
+                  foreach ($vulnerability in $package.vulnerabilities) {
+                    $severity = $vulnerability.severity
+                    if ($riskLevels[$severity] -ge $minRiskLevel) {
+                      Write-Host "##vso[task.logissue type=error]Found vulnerable NuGet package $($package.id) with severity $($vulnerability.severity) at $($vulnerability.advisoryurl)"
+                      $vulnerablePackages += $project.path
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          if ($vulnerablePackages.Count -gt 0) {
+            Write-Host "##vso[task.setvariable variable=vulnerablePackages]$($vulnerablePackages -join ',')"
+            exit 1
+          }
