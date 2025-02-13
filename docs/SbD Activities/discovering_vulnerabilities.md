@@ -77,11 +77,78 @@ SonarCloud can also be used in DfE, there are a number of licences available fro
 
 Although we do not provide documentation or support for Sonar, we do collect all SonarCloud data for analysis in the Continuous Assurance platform due to the high number of teams using it and the available licences.
 
-## Software Composition Analysis (SCA) / Dependabot
+## Software Composition Analysis (SCA)
+
+### Dependabot
 
 Due to our high usage of GitHub and the fact that GitHub ships with Dependabot for all repositories, we will support the use of Dependabot for SCA. 
 
 [Recommended configuration for Dependabot config files has been produced and added to the DfE technical guidance site](https://technical-guidance.education.gov.uk/standards/storing-source-code/#dependabot-configuration-options).
+
+
+### Nuget in Azure DevOps
+
+For those using .NET in Azure DevOps, an example template is available to enable Azure pipelines to audit for vulnerabilities in dependencies and then raise alerts and break builds. The dotnet cli has the capability to run the audit, and with some extra PowerShell you can collect that information and produce alerts.
+
+[The full template file can be found in the root of this respository](https://github.com/DFE-Digital/secure-by-design-docs/blob/main/dotnet-dependency-audit-azure-devops.yml).
+
+#### Code snippet
+```
+[...]
+    - task: DotNetCoreCLI@2
+      displayName: Dotnet Restore
+      inputs:
+        command: restore
+        projects: |
+          $(Build.SourcesDirectory)/**/*.csproj
+          !$(Build.SourcesDirectory)/**/*Backup*csproj
+          !$(Build.SourcesDirectory)/**/Web/**/*.csproj
+          !$(Build.SourcesDirectory)/**/Desktop/**/*.csproj
+        vstsFeed: ${{ parameters.NugetFeed }}
+
+   # Recurse all directories to look for potentional csproj files, then run the dotnet command and compare the risk levels against provided threshold parameter
+    - task: PowerShell@2
+      displayName: Read output
+      continueOnError: true # set to false to break builds when vulnerabilities above threshold is found
+      inputs:
+        targetType: 'inline'
+        script: |
+          $vulnerablePackages = @()
+          $riskLevels = @{
+            "Critical" = 4
+            "High" = 3
+            "Moderate" = 2
+            "Low" = 1
+          }
+          $minRiskLevel = $riskLevels["${{ parameters.DependencyAuditRiskLevel }}"]
+
+          $paths = Get-ChildItem -Path $(Build.SourcesDirectory) -Recurse -Include *.csproj -Exclude *Backup* -Name 
+          
+          foreach ($path in $paths) {
+            Write-Host $path
+            $output = dotnet list $(Build.SourcesDirectory)/$path package --vulnerable --include-transitive --format json
+            $jsonOutput = $output | Out-String | ConvertFrom-Json
+
+            foreach ($project in $jsonOutput.projects) {
+              foreach ($framework in $project.frameworks) {
+                foreach ($package in $framework.topLevelPackages + $framework.transitivePackages) {
+                  foreach ($vulnerability in $package.vulnerabilities) {
+                    $severity = $vulnerability.severity
+                    if ($riskLevels[$severity] -ge $minRiskLevel) {
+                      Write-Host "##vso[task.logissue type=error]Found vulnerable NuGet package $($package.id) with severity $($vulnerability.severity) at $($vulnerability.advisoryurl)"
+                      $vulnerablePackages += $project.path
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          if ($vulnerablePackages.Count -gt 0) {
+            Write-Host "##vso[task.setvariable variable=vulnerablePackages]$($vulnerablePackages -join ',')"
+            exit 1
+          }
+```
 
 ## Threat modelling
 
