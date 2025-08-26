@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: setup python
         uses: actions/setup-python@v5
@@ -65,10 +65,10 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Download site directory
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: site
           path: site/
@@ -110,13 +110,13 @@ jobs:
 
     steps:
       - name: Download site directory
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: site
           path: site/
 
       - name: Download useful_docs directory
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: useful_docs
           path: useful_docs/
