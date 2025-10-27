@@ -22,10 +22,10 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: setup python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12.3'
     
@@ -36,14 +36,14 @@ jobs:
         run: mkdocs build -d site/
     
       - name: Upload site directory
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: site
           path: site/
           retention-days: 1
         
       - name: Upload useful_docs directory
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: useful_docs
           path: useful_docs/
@@ -65,10 +65,10 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Download site directory
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: site
           path: site/
@@ -110,13 +110,13 @@ jobs:
 
     steps:
       - name: Download site directory
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: site
           path: site/
 
       - name: Download useful_docs directory
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: useful_docs
           path: useful_docs/
